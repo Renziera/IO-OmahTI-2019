@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1016271065249",
+    "firebase_url": "https://io-omahti.firebaseio.com",
+    "project_id": "io-omahti",
+    "storage_bucket": "io-omahti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016271065249:android:7c66146026ff02487160e0",
+        "android_client_info": {
+          "package_name": "id.web.omahti.orient_express"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016271065249-ctsnbjami50n20iipmgdf2in5iej5vl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRaau5MsvzDCB3Ang8k65f52FMY1i6pf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016271065249-ctsnbjami50n20iipmgdf2in5iej5vl0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
