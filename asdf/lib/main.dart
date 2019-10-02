@@ -28,12 +28,12 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     Future.delayed(Duration(seconds: 30)).then((value) {
       setState(() {
-       _teks = 'console log me'; 
+        _teks = 'console log me';
       });
     });
     Future.delayed(Duration(seconds: 60)).then((value) {
       setState(() {
-       _teks = 'console.log(me)'; 
+        _teks = 'console.log(me)';
       });
     });
   }
@@ -41,11 +41,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          _teks,
-          style: TextStyle(fontSize: 72),
-        ),
+      body: Stack(
+        children: [
+          Center(
+            child: Text(
+              _teks,
+              style: TextStyle(fontSize: 72),
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Text('Patience, my friend.'),
+            ],
+          ),
+        ],
       ),
     );
   }
