@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Baker Street',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: LoginPage(),
     );
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'It\'s hidden in plain sight. Use fire to expel those phantoms.',
+              'It\'s hidden in plain sight. All four elements gathered. One will be king, others will prefail. You only have one chance to prove yourself. Expel those phantoms in your names!',
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 16),
@@ -88,6 +88,7 @@ class ExplanationPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Disclaimer'),
       ),
+      backgroundColor: Colors.black,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.send),
         onPressed: () {
@@ -104,7 +105,9 @@ class ExplanationPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Text(
-              '\nPertama-tama, saya ucapkan selamat karena kalian telah sampai di sini.\n\nAplikasi ini memang jelek, jangan tertawakan saya. Jangan lupa teman anda saya tawan. Untuk membebaskannya ada satu Quest lagi yang harus kalian selesaikan. Yaitu kalian harus membuat suatu produk MVP (Minimum Viable Product). Produk dapat berupa apa saja, mulai dari aplikasi mobile, web, maupun game dengan tema bebas. Yang akan saya lihat adalah kekompakan serta kegigihan kalian dalam membuatnya.\n\nSaya tahu kalian masih maba, jadi saya beri keringanan yaitu kalian boleh berkonsultasi sesuai bidangnya dengan orang-orang ini:\n\nKadiv Gemdep\nKadiv MA\nKadiv Weebdev\nKadiv WD\nStanley Heryanto\n\nJika kalian sudah tahu apa yang akan dibuat, silahkan cantumkan ide kalian di halaman berikutnya.\n\nNB: Aplikasi ini tidak bisa di decompile, jangan coba-coba :v'),
+            '\nPertama-tama, saya ucapkan selamat karena kalian telah sampai di sini.\n\nAplikasi ini memang jelek, jangan tertawakan saya. Jangan lupa teman anda saya tawan. Untuk membebaskannya ada satu Quest lagi yang harus kalian selesaikan. Yaitu kalian harus membuat suatu produk MVP (Minimum Viable Product). Produk dapat berupa apa saja, mulai dari aplikasi mobile, web, maupun game dengan tema bebas. Yang akan saya lihat adalah kekompakan serta kegigihan kalian dalam membuatnya.\n\nSaya tahu kalian masih maba, jadi saya beri keringanan yaitu kalian boleh berkonsultasi sesuai bidangnya dengan orang-orang ini:\n\nKadiv Gemdep\nKadiv MA\nKadiv Weebdev\nKadiv WD\nStanley Heryanto\n\nJika kalian sudah tahu apa yang akan dibuat, silahkan cantumkan ide kalian di halaman berikutnya.\n\nNB: Aplikasi ini tidak bisa di decompile, jangan coba-coba :v',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );
@@ -183,17 +186,17 @@ class _IdeaPageState extends State<IdeaPage> {
                 color: Colors.blue,
                 textColor: Colors.white,
                 child: Text('GAS'),
-                onPressed: ()async {
+                onPressed: () async {
                   if (_timController.text.isEmpty ||
                       _ideController.text.isEmpty) return;
                   await widget.docRef.updateData({
-                    'nama':_timController.text,
-                    'ide':_ideController.text,
+                    'nama': _timController.text,
+                    'ide': _ideController.text,
                     'ubah_id': FieldValue.increment(1),
                     'waktu_ide': FieldValue.serverTimestamp(),
-                  });  
+                  });
                   setState(() {
-                   _title = ':)'; 
+                    _title = ':)';
                   });
                 },
               ),

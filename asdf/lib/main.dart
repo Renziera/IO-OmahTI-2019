@@ -6,9 +6,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IO 2019',
+      title: 'Enigmatic Void',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: HomePage(),
     );
@@ -41,18 +41,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
           Center(
             child: Text(
               _teks,
-              style: TextStyle(fontSize: 72),
+              style: TextStyle(fontSize: 72, color: Colors.white),
             ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              Text('Patience, my friend.'),
+              Text(
+                'Patience, my friend.',
+                style: TextStyle(color: Colors.white),
+              ),
             ],
           ),
         ],

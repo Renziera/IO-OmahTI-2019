@@ -6,9 +6,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IO 2019',
+      title: 'Enigmatic Void',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: HomePage(),
     );
@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,12 +34,12 @@ class _HomePageState extends State<HomePage> {
             Text(
               'Hello :)',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 72),
+              style: TextStyle(fontSize: 72, color: Colors.white),
             ),
             Text(
               'I WANT TO PLAY A GAME.',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 48),
+              style: TextStyle(fontSize: 48, color: Colors.white),
             ),
             SizedBox(height: 16),
             SizedBox(
@@ -46,11 +47,13 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 controller: _controller,
                 textAlign: TextAlign.center,
+                autofocus: true,
+                style: TextStyle(color: Colors.white),
               ),
             ),
             SizedBox(height: 16),
             RaisedButton(
-              color: Colors.blue,
+              color: Colors.green,
               textColor: Colors.white,
               child: Icon(Icons.lock_open),
               onPressed: () {
@@ -73,9 +76,10 @@ class DownloadPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('IO OmahTI 2019'),
+        title: Text('Enigmatic Void'),
         centerTitle: true,
       ),
+      backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +95,7 @@ class DownloadPage extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
             RaisedButton(
-              color: Colors.blue,
+              color: Colors.black,
               textColor: Colors.white,
               child: Icon(Icons.phone_android),
               onPressed: () => print('/abc.apk'),
