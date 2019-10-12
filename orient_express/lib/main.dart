@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                       .document(s)
                       .get();
                   if (ds.exists) {
-                    if (ds.data['solved'] ?? false) {
+                    if (!(ds.data['solved'] ?? false)) {
                       await ds.reference.updateData({
                         'solved': true,
                         'waktu': FieldValue.serverTimestamp(),
